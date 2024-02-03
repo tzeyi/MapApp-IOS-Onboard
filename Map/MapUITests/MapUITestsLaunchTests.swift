@@ -2,7 +2,7 @@
 //  MapUITestsLaunchTests.swift
 //  MapUITests
 //
-//  Created by Finn Moore on 1/25/24.
+//  Created by Tiong Tze Yi on 25/01/2024.
 //
 
 import XCTest
