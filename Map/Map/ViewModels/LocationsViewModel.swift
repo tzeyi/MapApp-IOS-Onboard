@@ -5,50 +5,53 @@
 //  Created by Tiong Tze Yi on 25/01/2024.
 //
 
+
 import Foundation
 import MapKit
 import SwiftUI
 
 class LocationsViewModel: ObservableObject {
     
-    // list of all the locations
-    // NOTE: when @Published is changed, view with this object will be re-rendered
+    // All loaded locations
     @Published var locations: [Location]
     
-    // current location on map
+    // Current location on map
     @Published var mapLocation: Location {
         didSet {
             updateMapRegion(location: mapLocation)
         }
     }
     
-    // default blank region
+    // Current region on map
     @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
-    
-    // show list of locations
-    @Published var showLocationsList: Bool = false
-    
-    // default span ratio
     let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     
-    init(){
+    // Show list of locations
+    @Published var showLocationsList: Bool = false
+    
+    // Show location detail via sheet
+    @Published var sheetLocation: Location? = nil
+    
+    init() {
         let locations = LocationsDataService.locations
-        
         self.locations = locations
         self.mapLocation = locations.first!
-        updateMapRegion(location: locations.first!)
+        
+        self.updateMapRegion(location: locations.first!)
     }
     
-    // MARK: - Intents
-    private func updateMapRegion(location: Location){
+    private func updateMapRegion(location: Location) {
         withAnimation(.easeInOut) {
-            mapRegion = MKCoordinateRegion(center: location.coordinates, span: mapSpan)
+            mapRegion = MKCoordinateRegion(
+                center: location.coordinates,
+                span: mapSpan)
         }
     }
     
     func toggleLocationsList() {
         withAnimation(.easeInOut) {
-            showLocationsList = !showLocationsList
+//            showLocationsList = !showLocationsList
+            showLocationsList.toggle()
         }
     }
     
@@ -58,6 +61,27 @@ class LocationsViewModel: ObservableObject {
             showLocationsList = false
         }
     }
-
+    
+    func nextButtonPressed() {
+        // Get the current index
+        guard let currentIndex = locations.firstIndex(where: { $0 == mapLocation }) else {
+            print("Could not find current index in locations array! Should never happen.")
+            return
+        }
+        
+        // Check if the currentIndex is valid
+        let nextIndex = currentIndex + 1
+        guard locations.indices.contains(nextIndex) else {
+            // Next index is NOT valid
+            // Restart from 0
+            guard let firstLocation = locations.first else { return }
+            showNextLocation(location: firstLocation)
+            return
+        }
+        
+        // Next index IS valid
+        let nextLocation = locations[nextIndex]
+        showNextLocation(location: nextLocation)
+    }
     
 }

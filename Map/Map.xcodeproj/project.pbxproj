@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ACCAAE972B6D95AF00322A87 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAAE962B6D95AF00322A87 /* LocationsListView.swift */; };
+		ACD8A9352B6E198C00937B15 /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD8A9342B6E198C00937B15 /* LocationPreviewView.swift */; };
 		ACDAC66F2B633FB400EC7272 /* MapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAC66E2B633FB400EC7272 /* MapApp.swift */; };
 		ACDAC6712B633FB400EC7272 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAC6702B633FB400EC7272 /* ContentView.swift */; };
 		ACDAC6762B633FB500EC7272 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDAC6752B633FB500EC7272 /* Preview Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		ACCAAE962B6D95AF00322A87 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
+		ACD8A9342B6E198C00937B15 /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 		ACDAC66B2B633FB400EC7272 /* Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDAC66E2B633FB400EC7272 /* MapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapApp.swift; sourceTree = "<group>"; };
 		ACDAC6702B633FB400EC7272 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		ACDAC69A2B63420000EC7272 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ACD8A9342B6E198C00937B15 /* LocationPreviewView.swift */,
 				ACDAC6A42B6347D300EC7272 /* LocationsView.swift */,
 				ACCAAE962B6D95AF00322A87 /* LocationsListView.swift */,
 			);
@@ -306,6 +309,7 @@
 			files = (
 				ACDAC6A12B6346BF00EC7272 /* LocationsDataService.swift in Sources */,
 				ACCAAE972B6D95AF00322A87 /* LocationsListView.swift in Sources */,
+				ACD8A9352B6E198C00937B15 /* LocationPreviewView.swift in Sources */,
 				ACDAC6A72B6347F700EC7272 /* LocationsViewModel.swift in Sources */,
 				ACDAC6712B633FB400EC7272 /* ContentView.swift in Sources */,
 				ACDAC6A52B6347D300EC7272 /* LocationsView.swift in Sources */,
