@@ -12,4 +12,4 @@ This mobile app uses the Model-View-ViewModel (MVVM) architecture and makes use 
   <img src="Assets/img2.png" alt="preview" style="width:15em; height:auto; margin-right:0.5em;">
 </div>
 
-![preview](Assets/img3.png)
+  <img src="Assets/img3.png" alt="preview" style="width:15em; height:auto; margin-right:0.5em;">
