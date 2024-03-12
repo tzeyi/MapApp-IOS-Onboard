@@ -8,8 +8,8 @@ Amazing Swift [Resource to refer](https://cs193p.sites.stanford.edu/2023)
 This mobile app uses the Model-View-ViewModel (MVVM) architecture and makes use of the MapKit package.
 
 <div style="display:flex;">
-  <img src="Assets/img1.png" alt="preview" style="width:300px; height:200px; margin-right:10px;">
-  <img src="Assets/img2.png" alt="preview" style="width:300px; height:200px;">
+  <img src="Assets/img1.png" alt="preview" style="width:15em; height:auto; margin-right:0.5em;">
+  <img src="Assets/img2.png" alt="preview" style="width:15em; height:auto; margin-right:0.5em;">
 </div>
 
-<img src="Assets/img2.png" alt="preview" style="width:300px; height:200px;">
+![preview](Assets/img3.png)
